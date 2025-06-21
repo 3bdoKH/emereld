@@ -1,0 +1,88 @@
+.con{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+    margin: 3rem 5rem;
+    position: relative;
+    z-index: 1;
+}
+.con > img {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+.con .contact-us{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+} 
+.con .contact-us h1{
+    color: var(--pink);
+    background: linear-gradient(90deg, var(--pink), var(--emerald));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3rem;
+}
+.con .contact-us p{
+    color: var(--emerald);
+    font-size: 1.2rem;
+}
+.con .contact-us .social-Links{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.con .contact-us .social-Links a{
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, var(--emerald), var(--pink));
+    transition: 0.3s;
+    color: var(--title);
+    border: 1px solid var(--emerald);
+    box-shadow: 0 1px 4px 0 rgba(0,230,162,0.10);
+}
+.con .contact-us .social-Links a:hover{
+    background: linear-gradient(90deg, var(--pink), var(--emerald));
+    color: var(--emerald);
+    border-color: var(--pink);
+}
+.con .contact-us .info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 2rem;
+    max-width: 300px;
+}
+.con .contact-us .info div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--emerald);
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--emerald);
+    background: linear-gradient(120deg, var(--secondary) 80%, var(--emerald) 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,230,162,0.10);
+    font-weight: 600;
+}
+.contact-info {
+    position: relative;
+    z-index: 2;
+}
+
+@media (width < 768px){
+    .con {
+        flex-direction: column;
+        margin: 3rem 1rem;
+    }
+    
+}

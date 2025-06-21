@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header/Header';
+import  HeroSectionOne  from './components/Hero/HeroSectionOne'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Footer from './components/Footer/Footer';
+import Services from './components/Services/Services';
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // whether animation should happen only once
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <HeroSectionOne />
+      <Services />
+      <Footer />
     </div>
   );
 }

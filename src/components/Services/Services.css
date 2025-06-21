@@ -1,0 +1,55 @@
+.services{
+    padding: 2rem 5rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+.services h1{
+    color: var(--pink);
+    font-size:5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+@media (max-width: 680px){
+    .services h1{
+        font-size: 3rem;
+
+    }
+    .services{
+        padding: 10px 10px;
+    }
+}
+.services > p{
+    color: var(--subtitle);
+    font-size: 20px;
+}
+.services .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.button {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: #151515;
+    color: #eee;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+    text-decoration: none;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background-color: var(--icon-hover);
+}
+
+.button-span {
+    color: #aaa;
+}

@@ -1,0 +1,137 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+}
+header .logo{
+    display: flex;
+    align-items: center;
+}
+header .logo > span {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.025;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 30px;
+}
+header nav ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--title);
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition:var(--transition);
+}
+header nav ul li a:hover{
+    background-color: var(--icon-hover);
+}
+.theme{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.theme button{
+    background-color: transparent;
+    color: var(--title);
+    cursor: pointer;
+    border-radius: 9999px;
+    border:1px solid var(--border);
+    padding: 7px;
+}
+header .show {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+    transition: var(--transition);
+}
+
+header .show:hover {
+    background-color: var(--icon-hover);
+}
+
+header .fixed {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(40, 40, 48, 0.91);
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}
+
+header .fixed ul {
+    width: 85%;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    background-color: var(--secondary);
+    padding: 20px 20px 10px;
+    position: relative;
+    list-style: none;
+}
+
+header .fixed ul li {
+    padding: 10px;
+}
+header .fixed ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--title);
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition:var(--transition);
+}
+header .fixed ul li a:hover{
+    background-color: var(--icon-hover);
+}
+
+header .fixed ul .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-weight: bold;
+    color: var(--subtitle);
+    transition: .3s;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+header .fixed ul .close:hover {
+    transform: rotate(180deg);
+    color: rgb(240, 86, 48);
+}
+
+@media (max-width: 700px) {
+    header nav {
+        display: none;
+    }
+
+    header .show {
+        display: flex;
+    }
+}

@@ -1,0 +1,207 @@
+.gradient-image{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+.about{
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+.sum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10rem;
+    position: relative;
+    z-index: 2;
+}
+.sum h1{
+    color: var(--pink);
+    font-size: 4.5rem;
+    text-align: center;
+    background: linear-gradient(90deg, var(--pink), var(--emerald));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.sum span {
+    color: var(--emerald);
+    font-size: 20px;
+    max-width: 70%;
+    text-align: center;
+}
+.sum p {
+    color: var(--subtitle);
+    max-width: 80%;
+    text-align: center;
+    font-size: 18px;
+}
+.mv {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 5rem 0;
+    padding: 10px 5rem;
+}
+.mv > div {
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--emerald);
+    background: linear-gradient(120deg, var(--secondary) 80%, var(--emerald) 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,230,162,0.10);
+}
+.mv > div > div{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--emerald);
+    width: fit-content;
+    background: linear-gradient(90deg, var(--pink), var(--emerald));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px 0 rgba(0,230,162,0.10);
+}
+.mv h2 {
+    color: var(--emerald);
+    margin-bottom: 1.5rem;
+}
+.mv p {
+    color: var(--subtitle);
+    font-size: 20px;
+}
+.values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 5rem 0;
+    padding: 10px 5rem;
+}
+.values h1 {
+    font-size: 5rem;
+    color: var(--pink);
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(90deg, var(--pink), var(--emerald));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.values > p {
+    color: var(--emerald);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.values .value-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.values .value-cards .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--emerald);
+    border-radius: 15px;
+    min-width: 280px;
+    background: linear-gradient(120deg, var(--secondary) 80%, var(--emerald) 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,230,162,0.10);
+}
+.values .value-cards .box > div {
+    padding: 10px;
+    border: 1px solid var(--emerald);
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--pink), var(--emerald));
+    width: fit-content;
+    box-shadow: 0 1px 4px 0 rgba(0,230,162,0.10);
+}
+.values .value-cards .box h3 {
+    color: var(--emerald);
+    font-size: 2rem;
+}
+.values .value-cards .box p{
+    color: var(--subtitle);
+}
+.get-started{
+    margin-top: 5rem;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--emerald);
+    border-radius: 10px;
+    background: linear-gradient(120deg, rgba(255,255,255,0.95) 80%, var(--emerald) 100%);
+    box-shadow: 0 1px 6px 0 rgba(0,230,162,0.10);
+}
+.get-started h3 {
+    margin: 2rem auto;
+    font-size: 2.5rem;
+    color: var(--emerald);
+}
+.get-started p {
+    color: var(--subtitle);
+    margin: 2rem auto;
+}
+.get-started a {
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--emerald);
+    border-radius: 8px;
+    border: 1px solid var(--emerald);
+    margin: 2rem auto;
+    width: fit-content;
+    display: block;
+    background: linear-gradient(90deg, var(--emerald), var(--pink));
+    font-weight: 700;
+    box-shadow: 0 1px 4px 0 rgba(0,230,162,0.10);
+    transition: background 0.18s, color 0.18s, transform 0.18s;
+}
+.get-started a:hover {
+    background: linear-gradient(90deg, var(--pink), var(--emerald));
+    color: var(--pink);
+    transform: scale(1.05);
+}
+
+@media (max-width: 1300px){
+    .values .value-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 925px){
+    .values .value-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 680px){
+    .values .value-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .values h1 {
+        font-size: 3rem;
+    }
+    .sum h1 {
+        font-size: 3rem;
+    }
+    .sum span {
+        font-size: 18px;
+    }
+    .sum p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 680px){
+    .mv {
+        padding: 10px 1rem;
+    }
+    .values{
+        padding: 10px 1rem;
+    }
+}
