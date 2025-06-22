@@ -92,10 +92,18 @@ main {
 }
 @media (width < 500px){
     .robot-3d{
-        scale: 0.5;
-        top: -25%;
-        right: -22% !important;
-        width: 140vw !important;
+        display: none;
+    }
+    .content {
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 50vh;
+        margin-left: 5rem;
     }
 }
 div.container{
