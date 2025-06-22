@@ -51,7 +51,7 @@
     color: var(--subtitle);
     margin-bottom: 1rem;
 }
-.card a {
+.card button {
     text-decoration: none;
     color: var(--emerald);
     padding: 10px;
@@ -62,8 +62,9 @@
     border: 1px solid var(--emerald);
     box-shadow: 0 1px 4px 0 rgba(0,230,162,0.10);
     transition: background 0.18s, color 0.18s, transform 0.18s;
+    cursor: pointer;
 }
-.card a:hover{
+.card button:hover{
     background: linear-gradient(90deg, var(--pink), var(--emerald));
     color: var(--pink);
     border-color: var(--pink);

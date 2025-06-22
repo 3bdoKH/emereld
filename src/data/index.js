@@ -1,4 +1,4 @@
-import { House, Contact, Info, Braces, Facebook, Instagram, Phone, ChevronsLeftRightEllipsis, QrCode, Camera, TicketCheck, Printer } from "lucide-react";
+import { House, Contact, Info, Braces, Facebook, Instagram, Phone, ChevronsLeftRightEllipsis, QrCode, Camera, TicketCheck, Printer, CameraIcon } from "lucide-react";
 
 import innovation from '../pages/About/svg/innovation.svg';
 import quality from '../pages/About/svg/quality.svg';
@@ -64,7 +64,8 @@ export const services = [
     services: [
         {"name": "Reels & Videos", "detail": "Engaging short-form content for social media"},
         {"name": "Product Photography", "detail": "Studio-quality images to showcase your merchandise"},
-        {"name": "Photo Sessions", "detail": "Professional portraits for teams or personal branding"}
+        {"name": "Photo Sessions", "detail": "Professional portraits for teams or personal branding"},
+        {"name": "Food Photography", "detail": "Mouth-watering images for menus, ads, or social media"}
     ],
     icon:<Camera color="#231f1f"/>
     },

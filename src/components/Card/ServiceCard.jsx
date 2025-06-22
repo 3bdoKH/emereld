@@ -2,7 +2,6 @@ import React from 'react'
 import './ServiceCard.css'
 const ServiceCard = ({icon, title, description, service, onCardClick}) => {
     const handleCardClick = (e) => {
-        // Don't trigger popup if clicking on the "Learn More" link
         if (e.target.tagName === 'A') {
             return;
         }
@@ -17,9 +16,9 @@ const ServiceCard = ({icon, title, description, service, onCardClick}) => {
                 <div></div>
             </div>
             <p>{description}</p>
-            <a href="/services" onClick={(e) => e.stopPropagation()}>
+            <button  onClick={handleCardClick}>
                 Learn More
-            </a>
+            </button>
         </div>
     )
 }

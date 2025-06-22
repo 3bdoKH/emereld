@@ -244,3 +244,43 @@
 
 
 }
+.service-videos{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.service-videos iframe {
+  width: 100%;
+  min-height: 270px;
+  aspect-ratio: 9/16;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+}
+@media (width < 500px){
+  .service-videos{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.fullscreen-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  cursor: zoom-out;
+}
+
+.fullscreen-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+  object-fit: contain;
+}

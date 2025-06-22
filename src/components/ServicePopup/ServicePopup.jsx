@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { X } from 'lucide-react'
 import './ServicePopup.css'
 
@@ -18,13 +18,17 @@ import tiktok from '../../images/socialmedia/tiktok.jpeg'
 import snapchat from '../../images/socialmedia/snapchat.jpeg'
 
 // Photography images
-import photo1 from '../../images/photography/5F95CF60-C740-41C6-A0AC-BFE9AD838065.jpg'
-import photo2 from '../../images/photography/B1E4431E-6B15-4E45-A99F-414C6E337944.JPEG'
-import photo3 from '../../images/photography/B5642D48-76E2-4693-8D13-A4AF96A52129.JPEG'
-import photo4 from '../../images/photography/B9DC6AFE-A41F-406F-AFAC-D4A4D53FEA35.JPEG'
-import photo5 from '../../images/photography/b9fffb2b7a07c1c63f26f44bc58196ca.JPG'
-import photo6 from '../../images/photography/IMG_2862_jpg.jpg'
-import photo7 from '../../images/photography/IMG_8398.jpg'
+import food1 from '../../images/photography/food.jpeg'
+import food2 from '../../images/photography/food-2.jpeg'
+import food3 from '../../images/photography/food-3.jpeg'
+import food4 from '../../images/photography/food-4.jpeg'
+import food5 from '../../images/photography/food-5.jpeg'
+import food6 from '../../images/photography/food-6.JPG'
+import product1 from '../../images/photography/product.jpeg'
+import product2 from '../../images/photography/product-2.jpeg'
+import product3 from '../../images/photography/product-3.jpeg'
+import session1 from '../../images/photography/IMG_8398.jpg'
+import session2 from '../../images/photography/IMG_2862_jpg.jpg'
 
 // Printing images
 import businessCards from '../../images/printing/business-cards.jpeg'
@@ -53,9 +57,13 @@ const serviceImages = {
   "Snapchat": [snapchat],
   
   // Photography
-  "Reels & Videos": [photo1, photo2],
-  "Product Photography": [photo3, photo4],
-  "Photo Sessions": [photo5, photo6, photo7],
+  "Reels & Videos": [
+    { type: 'embed', html: `<div style=\"position:relative; width:100%; height:0px; padding-bottom:177.778%\"><iframe allow=\"fullscreen;autoplay\" allowfullscreen height=\"100%\" src=\"https://streamable.com/e/3nrvck?autoplay=1&muted=1&nocontrols=1\" width=\"100%\" style=\"border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;\"></iframe></div>` },
+    { type: 'embed', html: `<div style=\"position:relative; width:100%; height:0px; padding-bottom:177.778%\"><iframe allow=\"fullscreen;autoplay\" allowfullscreen height=\"100%\" src=\"https://streamable.com/e/l1w5oc?autoplay=1&muted=1&nocontrols=1\" width=\"100%\" style=\"border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;\"></iframe></div>` }
+  ],
+  "Product Photography": [product1, product2, product3],
+  "Photo Sessions": [session1, session2],
+  "Food Photography": [food1, food2,food3, food4, food5, food6],
   
   // Printing
   "Business Cards": [businessCards],
@@ -71,6 +79,7 @@ const serviceImages = {
 }
 
 const ServicePopup = ({ service, isOpen, onClose }) => {
+  const [fullscreenImage, setFullscreenImage] = useState(null)
   if (!isOpen || !service) return null
 
   return (
@@ -102,7 +111,28 @@ const ServicePopup = ({ service, isOpen, onClose }) => {
                           <h4>{subService.name}</h4>
                           <p>{subService.detail}</p>
                         </div>
-                        {images.length > 0 && (
+                        {subService.name === 'Reels & Videos' && images.length > 0 ? (
+                          <div className="service-videos">
+                            {images.map((media, vidIndex) => (
+                              media.type === 'embed' ? (
+                                <div key={vidIndex} dangerouslySetInnerHTML={{ __html: media.html }} />
+                              ) : media.type === 'video' ? (
+                                <iframe
+                                  key={vidIndex}
+                                  src={media.url}
+                                  title={`Reel Video ${vidIndex + 1}`}
+                                  width="320"
+                                  height="180"
+                                  frameBorder="0"
+                                  allow="autoplay; fullscreen"
+                                  allowFullScreen
+                                  className="service-video"
+                                  style={{ margin: '8px' }}
+                                />
+                              ) : null
+                            ))}
+                          </div>
+                        ) : images.length > 0 ? (
                           <div className="service-images">
                             {images.map((image, imgIndex) => (
                               <img 
@@ -110,10 +140,12 @@ const ServicePopup = ({ service, isOpen, onClose }) => {
                                 src={image} 
                                 alt={subService.name}
                                 className="service-image"
+                                onClick={() => setFullscreenImage(image)}
+                                style={{ cursor: 'pointer' }}
                               />
                             ))}
                           </div>
-                        )}
+                        ) : null}
                       </div>
                     </div>
                   )
@@ -128,6 +160,11 @@ const ServicePopup = ({ service, isOpen, onClose }) => {
             </button>
           </div>
         </div>
+        {fullscreenImage && (
+          <div className="fullscreen-image-overlay" onClick={() => setFullscreenImage(null)}>
+            <img src={fullscreenImage} alt="Fullscreen" className="fullscreen-image" />
+          </div>
+        )}
       </div>
     </div>
   )
