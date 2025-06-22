@@ -47,7 +47,7 @@
   z-index: 2;
   box-shadow: 0 0 12px var(--emerald), 0 0 8px var(--pink);
 }
-.services-list {
+.services-list-1 {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -111,7 +111,7 @@
   margin: 0;
   width: 100%;
 }
-.service-item {
+.service-item-1 {
   color: var(--subtitle);
   font-size: 1rem;
   margin-bottom: 0.75rem;
@@ -336,12 +336,12 @@
   border-radius: 6px;
 }
 @media (max-width: 1200px) {
-  .services-list {
+  .services-list-1 {
     padding: 10px 2rem;
   }
 }
 @media (max-width: 900px) {
-  .services-list {
+  .services-list-1 {
     flex-direction: column;
     align-items: center;
     padding: 10px 1rem;

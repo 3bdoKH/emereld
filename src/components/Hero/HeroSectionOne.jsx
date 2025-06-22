@@ -46,7 +46,7 @@ const HeroSectionOne = () => {
                         </div>
                 </div>
             </main>
-            <Spline className='robot-3d' scene="https://prod.spline.design/6fx3WNmjqsLPqe6r/scene.splinecode" />
+            <Spline className='robot-3d' scene="https://prod.spline.design/JA4ZMUOUkTYTMgJ2/scene.splinecode" />
             
         </div>
     </section>

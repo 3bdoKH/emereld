@@ -90,6 +90,14 @@ main {
     top: 0;
     right: -20%;
 }
+@media (width < 500px){
+    .robot-3d{
+        scale: 0.5;
+        top: -25%;
+        right: -22% !important;
+        width: 140vw !important;
+    }
+}
 div.container{
     overflow: hidden;
 }

@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import ServicePopup from '../../components/ServicePopup/ServicePopup'
 import './Services.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { services } from '../../data'
 import gradient from './gradient.png'
 import { testimonials } from '../../data'
-import img1 from '../../images/5F95CF60-C740-41C6-A0AC-BFE9AD838065.jpg';
-import img2 from '../../images/B1E4431E-6B15-4E45-A99F-414C6E337944.JPEG';
-import img3 from '../../images/B9DC6AFE-A41F-406F-AFAC-D4A4D53FEA35.JPEG';
-import img4 from '../../images/b9fffb2b7a07c1c63f26f44bc58196ca.JPG';
-import img5 from '../../images/IMG_2862_jpg.jpg';
-import img6 from '../../images/B5642D48-76E2-4693-8D13-A4AF96A52129.JPEG';
-import img7 from '../../images/IMG_8398.jpg';
+import img1 from '../../images/photography/5F95CF60-C740-41C6-A0AC-BFE9AD838065.jpg';
+import img2 from '../../images/photography/B1E4431E-6B15-4E45-A99F-414C6E337944.JPEG';
+import img3 from '../../images/photography/B9DC6AFE-A41F-406F-AFAC-D4A4D53FEA35.JPEG';
+import img4 from '../../images/photography/b9fffb2b7a07c1c63f26f44bc58196ca.JPG';
+import img5 from '../../images/photography/IMG_2862_jpg.jpg';
+import img6 from '../../images/photography/B5642D48-76E2-4693-8D13-A4AF96A52129.JPEG';
+import img7 from '../../images/photography/IMG_8398.jpg';
 
 const Services = () => {
   useEffect(() => {
@@ -23,6 +24,19 @@ const Services = () => {
     })
     AOS.refresh()
   }, [])
+
+  const [selectedService, setSelectedService] = useState(null)
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+  const handleCardClick = (service) => {
+    setSelectedService(service)
+    setIsPopupOpen(true)
+  }
+
+  const closePopup = () => {
+    setIsPopupOpen(false)
+    setSelectedService(null)
+  }
 
   const handleRequestInfo = (category) => {
     window.location.href = `/contact?service=${encodeURIComponent(category)}`;
@@ -43,26 +57,38 @@ const Services = () => {
           </span>
         </div>
         <div className="services-divider" />
-        <div className="services-list">
+        <div className="services-list-1">
           {services.map((cat, idx) => (
-            <div className="service-category" key={cat.category} data-aos="fade-up" data-aos-delay={100 * idx}>
+            <div 
+              className="service-category" 
+              key={cat.category} 
+              data-aos="fade-up" 
+              data-aos-delay={100 * idx}
+              onClick={() => handleCardClick(cat)}
+              style={{cursor: 'pointer'}}
+            >
               <div className="service-icon service-icon-animated">{cat.icon}</div>
               <h2>{cat.category}</h2>
               <p className="service-description">{cat.description}</p>
               <ul className="service-items">
                 {cat.services.map((srv) => (
-                  <li key={srv.name} className="service-item">
+                  <li key={srv.name} className="service-item-1">
                     <strong>{srv.name}:</strong> {srv.detail}
                   </li>
                 ))}
               </ul>
-              <button className="request-info-btn" onClick={() => handleRequestInfo(cat.category)}>
+              <button 
+                className="request-info-btn" 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleRequestInfo(cat.category);
+                }}
+              >
                 Request Info
               </button>
             </div>
           ))}
         </div>
-        {/* Professional Photography Section */}
         <section className="photography-section" data-aos="fade-up" data-aos-delay="200">
           <h2 className="photography-title">Professional Photography</h2>
           <p className="photography-description">A showcase of our best work, capturing moments with creativity and precision.</p>
@@ -77,7 +103,6 @@ const Services = () => {
             ))}
           </div>
         </section>
-        {/* Featured Videos Section */}
         <section className="videos-section" data-aos="fade-up" data-aos-delay="200">
           <h2 className="videos-title">Featured Videos</h2>
           <p className="videos-description">Explore some of our video work, showcasing our creative and technical expertise.</p>
@@ -100,12 +125,18 @@ const Services = () => {
           <div className="testimonials-list">
             {testimonials.map((t, i) => (
               <div className="testimonial" key={i}>
-                <p className="testimonial-text">“{t.text}”</p>
+                <p className="testimonial-text">"{t.text}"</p>
                 <div className="testimonial-author">- {t.name}, <span>{t.company}</span></div>
               </div>
             ))}
           </div>
         </div>
+
+        <ServicePopup 
+          service={selectedService}
+          isOpen={isPopupOpen}
+          onClose={closePopup}
+        />
       </main>
       <Footer />
     </div>
