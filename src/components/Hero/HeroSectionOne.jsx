@@ -16,7 +16,7 @@ const HeroSectionOne = () => {
                             INTRODUCING 
                         </div>
                     </div>
-                        <h1>EMAIL FOR<br />DEVELOPERS</h1>
+                        <h1>YOUR VISION<br />PERFECTED</h1>
                         <p className='description'>
                         At EMRELED,We provide Web design, social media, photography, printing, and flight booking.
                         </p>
