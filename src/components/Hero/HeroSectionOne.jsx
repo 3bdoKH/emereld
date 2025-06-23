@@ -13,10 +13,10 @@ const HeroSectionOne = () => {
                 <div className="content">
                     <div className="tag-box" data-aos="zoom-in" data-aos-delay="200">
                         <div className="tag">
-                            ITRODUCING 
+                            INTRODUCING 
                         </div>
                     </div>
-                        <h1>ENAIL FOR<br />DEVELOPERS</h1>
+                        <h1>EMAIL FOR<br />DEVELOPERS</h1>
                         <p className='description'>
                         At EMRELED,We provide Web design, social media, photography, printing, and flight booking.
                         </p>
