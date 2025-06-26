@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import ServicePopup from '../../components/ServicePopup/ServicePopup'
 import './Services.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -15,6 +14,15 @@ import img4 from '../../images/photography/b9fffb2b7a07c1c63f26f44bc58196ca.JPG'
 import img5 from '../../images/photography/IMG_2862_jpg.jpg';
 import img6 from '../../images/photography/B5642D48-76E2-4693-8D13-A4AF96A52129.JPEG';
 import img7 from '../../images/photography/IMG_8398.jpg';
+import { useNavigate } from 'react-router-dom';
+
+const serviceRoutes = {
+  'Web Design': '/services/web',
+  'Social Media Management': '/services/social',
+  'Professional Photography': '/services/photography',
+  'Printing Services': '/services/printing',
+  'Travel Booking': '/services/booking',
+}
 
 const Services = () => {
   useEffect(() => {
@@ -25,25 +33,14 @@ const Services = () => {
     AOS.refresh()
   }, [])
 
-  const [selectedService, setSelectedService] = useState(null)
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
-
-  const handleCardClick = (service) => {
-    setSelectedService(service)
-    setIsPopupOpen(true)
-  }
-
-  const closePopup = () => {
-    setIsPopupOpen(false)
-    setSelectedService(null)
-  }
-
-  const handleRequestInfo = (category) => {
-    window.location.href = `/contact?service=${encodeURIComponent(category)}`;
+  const navigate = useNavigate();
+  const handleCardClick = (cat) => {
+    const route = serviceRoutes[cat.category];
+    if (route) navigate(route);
   };
 
   const allImages = [img1, img2, img3, img4, img5, img6, img7];
-  const [selectedImage, setSelectedImage] = useState(allImages[0]);
+  const [selectedImage, setSelectedImage] = React.useState(allImages[0]);
 
   return (
     <div className="container">
@@ -81,7 +78,7 @@ const Services = () => {
                 className="request-info-btn" 
                 onClick={(e) => {
                   e.stopPropagation();
-                  handleRequestInfo(cat.category);
+                  handleCardClick(cat);
                 }}
               >
                 Request Info
@@ -131,12 +128,6 @@ const Services = () => {
             ))}
           </div>
         </div>
-
-        <ServicePopup 
-          service={selectedService}
-          isOpen={isPopupOpen}
-          onClose={closePopup}
-        />
       </main>
       <Footer />
     </div>

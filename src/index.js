@@ -7,6 +7,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About/About'
 import Services from './pages/Services/Services'
 import Contact from './pages/Contact/Contact'
+import Booking from './pages/Services/booking/Booking';
+import Photography from './pages/Services/photography/Photography';
+import Printing from './pages/Services/printing/Printing';
+import Web from './pages/Services/web/Web';
+import Social from './pages/Services/socialmedia/Social';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +32,26 @@ const router = createBrowserRouter([
   {
     path:'/contact',
     element: <Contact />
+  },
+  {
+    path: '/services/web',
+    element: <Web />
+  },
+  {
+    path: '/services/booking',
+    element: <Booking />
+  },
+  {
+    path: '/services/photography',
+    element: <Photography />
+  },
+  {
+    path: '/services/printing',
+    element: <Printing />
+  },
+  {
+    path: '/services/social',
+    element: <Social />
   }
 ])
 

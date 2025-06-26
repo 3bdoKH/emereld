@@ -43,6 +43,7 @@
     text-decoration: none;
     width: fit-content;
     transition: 0.3s;
+    margin-bottom: 2rem;
 }
 
 .button:hover {

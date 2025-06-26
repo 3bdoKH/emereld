@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { services } from '../../data'
 import ServiceCard from '../Card/ServiceCard'
-import ServicePopup from '../ServicePopup/ServicePopup'
 import './Services.css'
+import { useNavigate } from 'react-router-dom'
+
+const serviceRoutes = {
+    'Web Design': '/services/web',
+    'Social Media Management': '/services/social',
+    'Professional Photography': '/services/photography',
+    'Printing Services': '/services/printing',
+    'Travel Booking': '/services/booking',
+}
 
 const Services = () => {
-    const [selectedService, setSelectedService] = useState(null)
-    const [isPopupOpen, setIsPopupOpen] = useState(false)
-
+    const navigate = useNavigate();
     const handleCardClick = (service) => {
-        setSelectedService(service)
-        setIsPopupOpen(true)
-    }
-
-    const closePopup = () => {
-        setIsPopupOpen(false)
-        setSelectedService(null)
+        const route = serviceRoutes[service.category];
+        if (route) navigate(route);
     }
 
     return (
@@ -40,12 +41,6 @@ const Services = () => {
         See All
         <span className="button-span"> ─ Now</span>
         </a>
-
-        <ServicePopup 
-            service={selectedService}
-            isOpen={isPopupOpen}
-            onClose={closePopup}
-        />
     </div>
     )
 }
