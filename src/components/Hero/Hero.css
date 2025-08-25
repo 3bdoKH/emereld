@@ -1,4 +1,4 @@
-.image-gradient{
+.image-gradient {
     position: absolute;
     top: 0;
     right: 0;
@@ -6,7 +6,7 @@
     z-index: -1;
 }
 
-.layer-blure{
+.layer-blure {
     height: 0;
     width: 30rem;
     position: absolute;
@@ -16,13 +16,15 @@
     rotate: -30deg;
     z-index: -1;
 }
-div.container{
+
+div.container {
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
     overflow: hidden;
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -30,11 +32,13 @@ main {
     min-height: calc(90vh - 6rem);
     margin-left: 5rem;
 }
+
 .content {
     max-width: 30rem;
     z-index: 999;
 }
-.tag-box{
+
+.tag-box {
     position: relative;
     width: 18rem;
     height: 2.5rem;
@@ -42,14 +46,16 @@ main {
     background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
     background-size: 200%;
     animation: gradient 2.5s linear infinite;
-    box-shadow: 0 0 15px rgba(255,255,255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
+
 @keyframes gradient {
     to {
         background-position: 200%;
     }
 }
-.tag-box .tag{
+
+.tag-box .tag {
     position: absolute;
     inset: 3px 3px 3px 3px;
     background-color: black;
@@ -60,44 +66,50 @@ main {
     transition: 0.5s ease;
     cursor: pointer;
 }
-.tag-box .tag:hover{
+
+.tag-box .tag:hover {
     color: #714da6;
 }
 
-.content h1{
+.content h1 {
     font-size: 4rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
     margin: 2rem 0;
     line-height: 1.2;
-    text-shadow: 0 0 10px rgba(128,128,128,0.418);
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
     color: var(--title);
 }
-.description{
+
+.description {
     font-size: 1.2rem;
     letter-spacing: 0.05rem;
     max-width: 35rem;
     color: var(--subtitle);
 }
-.buttons{
+
+.buttons {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-.robot-3d{
+.robot-3d {
     position: absolute;
     top: 0;
     right: -20%;
 }
-@media (width < 500px){
-    .robot-3d{
+
+@media (width < 500px) {
+    .robot-3d {
         display: none;
     }
+
     .content {
         margin-top: 0 !important;
         margin-left: 0 !important;
     }
+
     main {
         display: flex;
         flex-direction: column;
@@ -106,9 +118,11 @@ main {
         margin-left: 5rem;
     }
 }
-div.container{
+
+div.container {
     overflow: hidden;
 }
+
 .cssbuttons-io-button {
     background: var(--pink);
     color: white;
@@ -130,9 +144,9 @@ div.container{
     cursor: pointer;
     width: fit-content;
     text-decoration: none;
-  }
-  
-  .cssbuttons-io-button .icon {
+}
+
+.cssbuttons-io-button .icon {
     background: white;
     margin-left: 1em;
     position: absolute;
@@ -145,27 +159,28 @@ div.container{
     box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
     right: 0.3em;
     transition: all 0.3s;
-  }
-  
-  .cssbuttons-io-button:hover .icon {
+}
+
+.cssbuttons-io-button:hover .icon {
     width: calc(100% - 0.6em);
-  }
-  
-  .cssbuttons-io-button .icon svg {
+}
+
+.cssbuttons-io-button .icon svg {
     width: 1.1em;
     transition: transform 0.3s;
     color: #7b52b9;
-  }
-  
-  .cssbuttons-io-button:hover .icon svg {
+}
+
+.cssbuttons-io-button:hover .icon svg {
     transform: translateX(0.1em);
-  }
-  
-  .cssbuttons-io-button:active .icon {
+}
+
+.cssbuttons-io-button:active .icon {
     transform: scale(0.95);
-  }
-/* From Uiverse.io by McHaXYT */ 
-.button {
+}
+
+/* From Uiverse.io by McHaXYT */
+.button-hero {
     padding: 15px 20px;
     border: none;
     outline: none;
@@ -177,49 +192,58 @@ div.container{
     transition: all 0.25s ease-out;
     text-decoration: none;
     width: fit-content;
-  }
-  
-  .button:hover {
+}
+
+.button-hero:hover {
     transform: translateY(-3px);
-  }
-  
-  .button-span {
+}
+
+.button-hero-span {
     color: #aaa;
-  }
-@media (max-width: 1300px){
-    .content{
+}
+
+@media (max-width: 1300px) {
+    .content {
         margin-top: 85%;
     }
-    .robot-3d{
+
+    .robot-3d {
         scale: 0.8;
         top: -20%;
         right: 2%;
     }
 }
-@media (max-width: 768px){
-    .content{
-        margin-top:25rem;
+
+@media (max-width: 768px) {
+    .content {
+        margin-top: 25rem;
         max-width: 30rem;
         margin-left: 10%;
     }
-    .tag-box{
+
+    .tag-box {
         width: 12rem;
     }
-    .content h1{
+
+    .content h1 {
         font-size: 2.5rem;
     }
-    .robot-3d{
+
+    .robot-3d {
         scale: 0.5;
         top: -25%;
         right: 0;
     }
-    .description{
+
+    .description {
         font-size: 1rem;
     }
-    .buttons{
+
+    .buttons {
         flex-direction: column;
     }
-    main{
+
+    main {
         margin-left: 0;
     }
 }
