@@ -20,16 +20,43 @@ header .logo {
     display: flex;
     align-items: center;
     transition: transform 0.3s ease;
+    width: 80px;
+    justify-content: flex-start;
+    flex: 1 1;
 }
+
+header .logo span {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.025;
+}
+
+header .logo img {
+    max-height: 100%;
+    width: 80px;
+    margin-right: -22px;
+}
+
+header .logo img.light {
+    filter: invert(1);
+}
+
 
 header .logo:hover {
     transform: scale(1.02);
 }
 
-header .logo>span {
+header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--title);
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 800;
     letter-spacing: 0.025;
 }
 

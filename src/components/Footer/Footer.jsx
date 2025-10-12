@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../default-monochrome-white.svg'
+import logo from '../../logo-tr.png'
 import { socialLinks, navItems, services } from '../../data/index'
 import { ChevronRight, MapPin, Phone, Mail } from 'lucide-react'
 import './Footer.css'
@@ -9,7 +9,12 @@ const Footer = () => {
         <footer data-aos="fade-up">
             <div className="up">
                 <div className="about-footer">
-                    <img src={logo} alt="Logo" width={100} height={40} />
+                    <div className="footer-logo">
+                        <img src={logo} alt="Logo" />
+                        <span>
+                            dam's Agency
+                        </span>
+                    </div>
                     <p className="description">
                         Leading marketing and technology company providing innovative solutions for businesses worldwide.
                     </p>
@@ -57,19 +62,19 @@ const Footer = () => {
                     <h3>Contact</h3>
                     <p>
                         <MapPin color='#374FFF' />
-                        <span>79 Taiba Towers - Nasr City, 11511</span>
+                        <span>77 Taiba Towers - Nasr City, 11511</span>
                     </p>
                     <p>
                         <Phone color='#374FFF' />
-                        <span>+20 109 501 6685</span>
+                        <span>+20 10 340 16811</span>
                     </p>
                     <p>
                         <Mail color='#374FFF' />
-                        <span>emereldemarkting@gmail.com</span>
+                        <span>adamsagency@gmail.com</span>
                     </p>
                 </div>
                 <div className="copyright">
-                    <p>@ 2025 EMERELD. All rights reserved.</p>
+                    <p>@ 2025 Adam's Agency. All rights reserved.</p>
                 </div>
             </div>
         </footer>

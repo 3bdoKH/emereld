@@ -22,7 +22,7 @@ const Contact = () => {
     <div>
       <Header />
       <div className="con">
-        <img src={gradient} alt="" width={500} height={500}/>
+        <img src={gradient} alt="" width={500} height={500} />
         <div className="contact-us" data-aos="fade-right">
           <h1>Contact Us</h1>
           <p>Let's Build Something Amazing Together</p>
@@ -37,18 +37,18 @@ const Contact = () => {
           </div>
           <div className="info">
             <div>
-            <MapPin color="#1f57ff" />
-            <span>79 Taiba Towers - Nasr City, 11511</span>
+              <MapPin color="#1f57ff" />
+              <span>77 Taiba Towers - Nasr City, 11511</span>
             </div>
             <div>
-            <Phone color="#44c200" />
+              <Phone color="#44c200" />
               <span>
-            +20 109 501 6685
+                +20 10 340 16811
               </span>
             </div>
             <div>
-            <Mail color="#ff1a1a" />
-            <span>emereldemarkting@gmail.com</span>
+              <Mail color="#ff1a1a" />
+              <span>adamsagency@gmail.com</span>
             </div>
           </div>
         </div>

@@ -50,19 +50,19 @@ const Services = () => {
         <div className="services-summary" data-aos="zoom-in" data-aos-delay="200">
           <h1>Our Services</h1>
           <span>
-            Discover the wide range of creative and technical services EMERELD offers to help your business grow.
+            Discover the wide range of creative and technical services Adam's Agency offers to help your business grow.
           </span>
         </div>
         <div className="services-divider" />
         <div className="services-list-1">
           {services.map((cat, idx) => (
-            <div 
-              className="service-category" 
-              key={cat.category} 
-              data-aos="fade-up" 
+            <div
+              className="service-category"
+              key={cat.category}
+              data-aos="fade-up"
               data-aos-delay={100 * idx}
               onClick={() => handleCardClick(cat)}
-              style={{cursor: 'pointer'}}
+              style={{ cursor: 'pointer' }}
             >
               <div className="service-icon service-icon-animated">{cat.icon}</div>
               <h2>{cat.category}</h2>
@@ -74,8 +74,8 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <button 
-                className="request-info-btn" 
+              <button
+                className="request-info-btn"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleCardClick(cat);
@@ -90,12 +90,12 @@ const Services = () => {
           <h2 className="photography-title">Professional Photography</h2>
           <p className="photography-description">A showcase of our best work, capturing moments with creativity and precision.</p>
           <div className="photography-gallery-main">
-            <img src={selectedImage} alt="Selected Emereld Photography" className="main-photo" />
+            <img src={selectedImage} alt="Selected Adam's Agency Photography" className="main-photo" />
           </div>
           <div className="photography-gallery-thumbnails">
             {allImages.map((src, idx) => (
               <div className={`photo-thumb${selectedImage === src ? ' selected' : ''}`} key={idx} onClick={() => setSelectedImage(src)}>
-                <img src={src} alt={`Emereld Photography Thumbnail ${idx+1}`} loading="lazy" />
+                <img src={src} alt={`Adam's Agency Photography Thumbnail ${idx + 1}`} loading="lazy" />
               </div>
             ))}
           </div>
@@ -114,7 +114,7 @@ const Services = () => {
         </section>
         <div className="services-cta" data-aos="zoom-in-up" data-aos-delay="200">
           <h3>Ready to elevate your business?</h3>
-          <p>Contact us today for a free consultation and discover how EMERELD can help you achieve your goals.</p>
+          <p>Contact us today for a free consultation and discover how Adam's Agency can help you achieve your goals.</p>
           <a href="/contact" className="cta-btn">Get in Touch</a>
         </div>
         <div className="testimonials-section" data-aos="fade-up" data-aos-delay="300">

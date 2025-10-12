@@ -18,7 +18,7 @@ const HeroSectionOne = () => {
                         </div>
                         <h1>YOUR VISION<br />PERFECTED</h1>
                         <p className='description'>
-                            At EMRELED,We provide Web design, social media, photography, printing, and flight booking.
+                            At Adam's Agency,We provide Web design, social media, photography, printing, and flight booking.
                         </p>
                         <div className="buttons" data-aos="fade-up" data-aos-delay="400">
                             <a href='/contact'

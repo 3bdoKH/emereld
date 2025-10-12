@@ -28,13 +28,29 @@ footer .up {
     width: 100%;
 }
 
-footer .up .about-footer img {
+footer .up .about-footer .footer-logo img {
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
+    width: 100px;
+    height: 100px;
 }
 
-footer .up .about-footer img:hover {
+footer .up .about-footer .footer-logo img.light {
+    filter: invert(1);
+}
+
+footer .up .about-footer .footer-logo img:hover {
     transform: scale(1.05);
+}
+
+footer .up .about-footer .footer-logo span {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    /* font-weight: 800; */
+    letter-spacing: 0.025;
+    color: var(--title);
+    margin-top: -25px;
+    margin-left: -13px;
 }
 
 footer .up .about-footer p {

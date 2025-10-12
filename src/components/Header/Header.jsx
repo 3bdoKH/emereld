@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 import { navItems } from '../../data'
 import { useState, useEffect } from 'react'
 import { Moon, Sun, Menu, SquareX } from 'lucide-react'
-import logo from '../../default-monochrome-white.svg'
-import logoBlack from '../../default-monochrome-black.svg'
+import logo from '../../logo-tr.png'
 const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [theme, setTheme] = useState(
@@ -16,11 +15,13 @@ const Header = () => {
         if (theme === "light") {
             document.body.classList.remove("dark");
             document.body.classList.add("light");
-            document.querySelector("header .logo img").src = logoBlack
+            document.querySelector("header .logo img").classList.add("light");
+            document.querySelector("footer .footer-logo img").classList.add("light");
         } else {
             document.body.classList.remove("light");
             document.body.classList.add("dark");
-            document.querySelector("header .logo img").src = logo
+            document.querySelector("header .logo img").classList.remove("light");
+            document.querySelector("footer .footer-logo img").classList.remove("light");
         }
     }, [theme]);
     console.log(logo)
@@ -37,6 +38,9 @@ const Header = () => {
                             width={150}
                             height={70}
                         />
+                        <span>
+                            dam's Agency
+                        </span>
                     </Link>
                 </div>
                 <nav>
