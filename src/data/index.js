@@ -1,139 +1,309 @@
-import { House, Contact, Info, Braces, Facebook, Instagram, Phone, ChevronsLeftRightEllipsis, QrCode, Camera, TicketCheck, Printer, CameraIcon } from "lucide-react";
+import {
+  House,
+  Contact,
+  Info,
+  Braces,
+  Facebook,
+  Instagram,
+  Phone,
+  ChevronsLeftRightEllipsis,
+  QrCode,
+  Camera,
+  TicketCheck,
+  Printer,
+  Briefcase,
+} from "lucide-react";
 
-import innovation from '../pages/About/svg/innovation.svg';
-import quality from '../pages/About/svg/quality.svg';
-import collaboration from '../pages/About/svg/collaboration.svg';
-import excellence from '../pages/About/svg/excellence.svg';
+import innovation from "../pages/About/svg/innovation.svg";
+import quality from "../pages/About/svg/quality.svg";
+import collaboration from "../pages/About/svg/collaboration.svg";
+import excellence from "../pages/About/svg/excellence.svg";
+
 export const testimonials = [
-    {
-        name: 'Sarah M.',
-        text: 'EMERELD transformed our online presence. Their web design and social media management are top-notch!',
-        company: 'BrightStart Co.'
-    },
-    {
-        name: 'Ahmed F.',
-        text: 'Professional, creative, and always on time. Highly recommend their photography and print services.',
-        company: 'Cairo Eats'
-    },
-    {
-        name: 'Lina G.',
-        text: 'Booking our business trips has never been easier. EMERELD handles everything seamlessly.',
-        company: 'TravelPro Solutions'
-    }
+  {
+    name: "Sarah M.",
+    text: "EMERELD transformed our online presence. Their web design and social media management are top-notch!",
+    company: "BrightStart Co.",
+  },
+  {
+    name: "Ahmed F.",
+    text: "Professional, creative, and always on time. Highly recommend their photography and print services.",
+    company: "Cairo Eats",
+  },
+  {
+    name: "Lina G.",
+    text: "Booking our business trips has never been easier. EMERELD handles everything seamlessly.",
+    company: "TravelPro Solutions",
+  },
 ];
 
 export const socialLinks = [
-    {
-        link: "https://www.facebook.com/share/16Lj34jRgz/",
-        icon: <Facebook color="#231f1f" />,
-    }, {
-        link: "https://www.instagram.com/emereldemarkting?igsh=MW94Z2JtN3VlcHgzZQ==",
-        icon: <Instagram color="#231f1f" />,
-    }, {
-        link: "https://wa.me/+201034016811",
-        icon: <Phone color="#231f1f" />,
-    }
-]
+  {
+    link: "https://www.facebook.com/share/16Lj34jRgz/",
+    icon: <Facebook color="#231f1f" />,
+  },
+  {
+    link: "https://www.instagram.com/emereldemarkting?igsh=MW94Z2JtN3VlcHgzZQ==",
+    icon: <Instagram color="#231f1f" />,
+  },
+  {
+    link: "https://wa.me/+201034016811",
+    icon: <Phone color="#231f1f" />,
+  },
+];
 
 export const services = [
-    {
-        category: "Web Design",
-        description: "Professional online presence development with responsive designs.",
-        services: [
-            { "name": "Informational Websites", "detail": "Custom-built sites to showcase your brand and services" },
-            { "name": "E-commerce Stores", "detail": "Secure online shops with payment integration and inventory management" },
-            { "name": "SEO", "detail": "Search engine optimization to improve visibility and organic traffic" },
-            { "name": "Google Ads", "detail": "Targeted advertising campaigns for maximum ROI" }
-        ],
-        icon: <ChevronsLeftRightEllipsis color="#231f1f" />
-    },
-    {
-        category: "Social Media Management",
-        description: "Strategic content creation across major platforms.",
-        services: [
-            { "name": "Facebook", "detail": "Brand storytelling and community building" },
-            { "name": "Instagram", "detail": "Visual content strategy and influencer collaborations" },
-            { "name": "TikTok", "detail": "Trend-driven short videos for viral potential" },
-            { "name": "Snapchat", "detail": "Ephemeral content for authentic engagement" }
-        ],
-        icon: <QrCode color="#231f1f" />
-    },
-    {
-        category: "Professional Photography",
-        description: "High-quality visual content to elevate your brand's image.",
-        services: [
-            { "name": "Reels & Videos", "detail": "Engaging short-form content for social media" },
-            { "name": "Product Photography", "detail": "Studio-quality images to showcase your merchandise" },
-            { "name": "Photo Sessions", "detail": "Professional portraits for teams or personal branding" },
-            { "name": "Food Photography", "detail": "Mouth-watering images for menus, ads, or social media" }
-        ],
-        icon: <Camera color="#231f1f" />
-    },
-    {
-        category: "Printing Services",
-        description: "Premium quality print materials for effective offline marketing.",
-        services: [
-            { "name": "Business Cards", "detail": "Premium cardstock with various finish options" },
-            { "name": "Flyers & Brochures", "detail": "Eye-catching designs for promotions and events" },
-            { "name": "Restaurant Menus", "detail": "Food photography integrated with menu design" },
-            { "name": "Custom Invoice Books", "detail": "Branded financial documents with sequential numbering" },
-            { "name": "Prescription Pads", "detail": "Professional medical forms with security features" },
-            { "name": "Advertising Signage", "detail": "Durable indoor/outdoor signs for maximum visibility" }
-        ],
-        icon: <Printer color="#231f1f" />
-    },
-    {
-        category: "Travel Booking",
-        description: "Hassle-free flight arrangements with competitive pricing.",
-        services: [
-            { "name": "International Flights", "detail": "Worldwide destinations with premium airline options" },
-            { "name": "Domestic Flights", "detail": "Local travel with best-price guarantees" }
-        ],
-        icon: <TicketCheck color="#231f1f" />
-    }
-]
+  {
+    category: "Web Design",
+    description:
+      "Professional online presence development with responsive designs.",
+    services: [
+      {
+        name: "Informational Websites",
+        detail: "Custom-built sites to showcase your brand and services",
+      },
+      {
+        name: "E-commerce Stores",
+        detail:
+          "Secure online shops with payment integration and inventory management",
+      },
+      {
+        name: "SEO",
+        detail:
+          "Search engine optimization to improve visibility and organic traffic",
+      },
+      {
+        name: "Google Ads",
+        detail: "Targeted advertising campaigns for maximum ROI",
+      },
+    ],
+    icon: <ChevronsLeftRightEllipsis color="#231f1f" />,
+  },
+  {
+    category: "Social Media Management",
+    description: "Strategic content creation across major platforms.",
+    services: [
+      { name: "Facebook", detail: "Brand storytelling and community building" },
+      {
+        name: "Instagram",
+        detail: "Visual content strategy and influencer collaborations",
+      },
+      {
+        name: "TikTok",
+        detail: "Trend-driven short videos for viral potential",
+      },
+      {
+        name: "Snapchat",
+        detail: "Ephemeral content for authentic engagement",
+      },
+    ],
+    icon: <QrCode color="#231f1f" />,
+  },
+  {
+    category: "Professional Photography",
+    description: "High-quality visual content to elevate your brand's image.",
+    services: [
+      {
+        name: "Reels & Videos",
+        detail: "Engaging short-form content for social media",
+      },
+      {
+        name: "Product Photography",
+        detail: "Studio-quality images to showcase your merchandise",
+      },
+      {
+        name: "Photo Sessions",
+        detail: "Professional portraits for teams or personal branding",
+      },
+      {
+        name: "Food Photography",
+        detail: "Mouth-watering images for menus, ads, or social media",
+      },
+    ],
+    icon: <Camera color="#231f1f" />,
+  },
+  {
+    category: "Printing Services",
+    description:
+      "Premium quality print materials for effective offline marketing.",
+    services: [
+      {
+        name: "Business Cards",
+        detail: "Premium cardstock with various finish options",
+      },
+      {
+        name: "Flyers & Brochures",
+        detail: "Eye-catching designs for promotions and events",
+      },
+      {
+        name: "Restaurant Menus",
+        detail: "Food photography integrated with menu design",
+      },
+      {
+        name: "Custom Invoice Books",
+        detail: "Branded financial documents with sequential numbering",
+      },
+      {
+        name: "Prescription Pads",
+        detail: "Professional medical forms with security features",
+      },
+      {
+        name: "Advertising Signage",
+        detail: "Durable indoor/outdoor signs for maximum visibility",
+      },
+    ],
+    icon: <Printer color="#231f1f" />,
+  },
+  {
+    category: "Travel Booking",
+    description: "Hassle-free flight arrangements with competitive pricing.",
+    services: [
+      {
+        name: "International Flights",
+        detail: "Worldwide destinations with premium airline options",
+      },
+      {
+        name: "Domestic Flights",
+        detail: "Local travel with best-price guarantees",
+      },
+    ],
+    icon: <TicketCheck color="#231f1f" />,
+  },
+];
 export const navItems = [
-    {
-        name: 'Home',
-        link: '/',
-        icon: <House size={18} color="#CBACF9" strokeWidth={3} />
-    },
-    {
-        name: 'About',
-        link: '/about',
-        icon: <Info size={18} color="#CBACF9" strokeWidth={3} />
-    },
-    {
-        name: 'Services',
-        link: '/services',
-        icon: <Braces size={18} color="#CBACF9" strokeWidth={3} />
-    },
-    {
-        name: 'Contact',
-        link: '/contact',
-        icon: <Contact size={18} color="#CBACF9" strokeWidth={3} />
-    }
-]
+  {
+    name: "Home",
+    link: "/",
+    icon: <House size={18} color="#CBACF9" strokeWidth={3} />,
+  },
+  {
+    name: "About",
+    link: "/about",
+    icon: <Info size={18} color="#CBACF9" strokeWidth={3} />,
+  },
+  {
+    name: "Services",
+    link: "/services",
+    icon: <Braces size={18} color="#CBACF9" strokeWidth={3} />,
+  },
+  {
+    name: "Profile",
+    link: "/profile",
+    icon: <Briefcase size={18} color="#CBACF9" strokeWidth={3} />,
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+    icon: <Contact size={18} color="#CBACF9" strokeWidth={3} />,
+  },
+];
+
+export const projects = [
+  {
+    title: "Tashteeb",
+    image: "tashteeb.png",
+    description:
+      "Full-service home renovation and finishing company providing affordable payment plans for quality interior and exterior remodeling services across Egypt.",
+    features: [
+      "Installment plans",
+      "Interior design",
+      "Complete renovations",
+      "Material sourcing",
+    ],
+    yearCompleted: 2023,
+    clientType: "Home Improvement",
+    domain: "tashteeb-beltaqseet.com",
+    url: "https://tashteeb-beltaqseet.com",
+  },
+  {
+    title: "Car Market",
+    image: "carmarket.png",
+    description:
+      "Comprehensive automotive service marketplace connecting car owners with trusted mechanics, parts suppliers, and service providers throughout Egypt.",
+    features: [
+      "Service booking",
+      "Mechanic finder",
+      "Parts catalog",
+      "Price comparison",
+    ],
+    yearCompleted: 2023,
+    clientType: "Automotive Marketplace",
+    domain: "carmarket-eg.online",
+    url: "https://carmarket-eg.online",
+  },
+
+  {
+    title: "Arizona",
+    image: "arizona.png",
+    description:
+      "Gourmet desserts and custom sweets shop offering a delightful selection of cakes, pastries, and confections made with premium ingredients and artistic presentation.",
+    features: [
+      "Online ordering",
+      "Custom cake design",
+      "Event catering",
+      "Nationwide delivery",
+    ],
+    yearCompleted: 2022,
+    clientType: "Food & Beverage",
+    domain: "arizona4sweet.online",
+    url: "https://arizona4sweet.online",
+  },
+  {
+    title: "Al Haitham Doors",
+    image: "alhitham.png",
+    description:
+      "Premium door manufacturing and installation services across Egypt, offering a wide range of custom and standard designs for residential and commercial properties.",
+    features: [
+      "Custom door design",
+      "Professional installation",
+      "Wide product range",
+      "Quality materials",
+    ],
+    yearCompleted: 2023,
+    clientType: "Manufacturing & Retail",
+    domain: "alhaithamdoors.online",
+    url: "https://alhaithamdoors.online",
+  },
+  {
+    title: "Winch Mohamed Bahr",
+    image: "winch.png",
+    description:
+      "24/7 roadside assistance and towing service operating throughout Egypt, providing fast and reliable emergency vehicle recovery and transportation services.",
+    features: [
+      "Emergency towing",
+      "Roadside assistance",
+      "Vehicle recovery",
+      "Nationwide service",
+    ],
+    yearCompleted: 2022,
+    clientType: "Automotive Services",
+    domain: "winchmohamedbahr.com",
+    url: "https://winchmohamedbahr.com",
+  },
+];
 
 export const values = [
-    {
-        name: "Innovation",
-        description: "We constantly innovate to deliver advanced solutions that meet evolving market needs.",
-        iconLink: innovation
-    },
-    {
-        name: "Quality",
-        description: "We are committed to the highest standards of quality in all our projects and services.",
-        iconLink: quality
-    },
-    {
-        name: "Collaboration",
-        description: "We work as a team with our clients to achieve the best results.",
-        iconLink: collaboration
-    },
-    {
-        name: "Excellence",
-        description: "We always strive for excellence in everything we deliver.",
-        iconLink: excellence
-    }
+  {
+    name: "Innovation",
+    description:
+      "We constantly innovate to deliver advanced solutions that meet evolving market needs.",
+    iconLink: innovation,
+  },
+  {
+    name: "Quality",
+    description:
+      "We are committed to the highest standards of quality in all our projects and services.",
+    iconLink: quality,
+  },
+  {
+    name: "Collaboration",
+    description:
+      "We work as a team with our clients to achieve the best results.",
+    iconLink: collaboration,
+  },
+  {
+    name: "Excellence",
+    description: "We always strive for excellence in everything we deliver.",
+    iconLink: excellence,
+  },
 ];

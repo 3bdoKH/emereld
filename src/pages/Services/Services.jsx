@@ -105,7 +105,7 @@ const Services = () => {
           <p className="videos-description">Explore some of our video work, showcasing our creative and technical expertise.</p>
           <div className="videos-gallery">
             <div className="video-item">
-              <iframe src="https://streamable.com/e/bf35bp" allowFullScreen title="Featured Video 1" frameBorder="0"></iframe>
+              <iframe src="https://streamable.com/e/3nrvck" allowFullScreen title="Featured Video 1" frameBorder="0"></iframe>
             </div>
             <div className="video-item">
               <iframe src="https://streamable.com/e/3htihn" allowFullScreen title="Featured Video 2" frameBorder="0"></iframe>

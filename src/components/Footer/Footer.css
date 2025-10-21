@@ -343,6 +343,11 @@ footer .down .copyright {
     }
 }
 
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
 /* Light theme adjustments */
 body.light footer {
     background: linear-gradient(135deg, rgba(227, 232, 247, 0.3) 0%, rgba(127, 90, 240, 0.05) 100%);
