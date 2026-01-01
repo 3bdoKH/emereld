@@ -38,14 +38,14 @@ export const testimonials = [
 ];
 
 export const socialLinks = [
-  {
-    link: "https://www.facebook.com/share/16Lj34jRgz/",
-    icon: <Facebook color="#231f1f" />,
-  },
-  {
-    link: "https://www.instagram.com/emereldemarkting?igsh=MW94Z2JtN3VlcHgzZQ==",
-    icon: <Instagram color="#231f1f" />,
-  },
+  // {
+  //   link: "https://www.facebook.com/share/16Lj34jRgz/",
+  //   icon: <Facebook color="#231f1f" />,
+  // },
+  // {
+  //   link: "https://www.instagram.com/emereldemarkting?igsh=MW94Z2JtN3VlcHgzZQ==",
+  //   icon: <Instagram color="#231f1f" />,
+  // },
   {
     link: "https://wa.me/+201034016811",
     icon: <Phone color="#231f1f" />,
@@ -154,21 +154,21 @@ export const services = [
     ],
     icon: <Printer color="#231f1f" />,
   },
-  {
-    category: "Travel Booking",
-    description: "Hassle-free flight arrangements with competitive pricing.",
-    services: [
-      {
-        name: "International Flights",
-        detail: "Worldwide destinations with premium airline options",
-      },
-      {
-        name: "Domestic Flights",
-        detail: "Local travel with best-price guarantees",
-      },
-    ],
-    icon: <TicketCheck color="#231f1f" />,
-  },
+  // {
+  //   category: "Travel Booking",
+  //   description: "Hassle-free flight arrangements with competitive pricing.",
+  //   services: [
+  //     {
+  //       name: "International Flights",
+  //       detail: "Worldwide destinations with premium airline options",
+  //     },
+  //     {
+  //       name: "Domestic Flights",
+  //       detail: "Local travel with best-price guarantees",
+  //     },
+  //   ],
+  //   icon: <TicketCheck color="#231f1f" />,
+  // },
 ];
 export const navItems = [
   {
@@ -200,7 +200,55 @@ export const navItems = [
 
 export const projects = [
   {
-    title: "Tashteeb",
+    title: "Dalel eltashtebat",
+    image: "dalel.png",
+    description:
+      "A digital directory that connects homeowners in Egypt with trusted finishing (decoration & renovation) companies.",
+    features: [
+      "Digital directory",
+      "Trusted companies",
+      "Homeowner connections",
+      "Egypt-wide coverage",
+    ],
+    yearCompleted: 2025,
+    clientType: "Home Improvement",
+    domain: "daleleltashtebat.online",
+    url: "https://dalel-eltashtebat.online",
+  },
+  {
+    title: "Kayan tashteeb",
+    image: "kayan.png",
+    description:
+      "Full-service home renovation and finishing company providing affordable payment plans for quality interior and exterior remodeling services across Egypt.",
+    features: [
+      "Installment plans",
+      "Interior design",
+      "Complete renovations",
+      "Material sourcing",
+    ],
+    yearCompleted: 2023,
+    clientType: "Home Improvement",
+    domain: "kayantashteeb.online",
+    url: "https://kayan-tashteebbeltaqseet.online/",
+  },
+  {
+    title: "Winch El Mohandes",
+    image: "elmohandes.png",
+    description:
+      "Providing furniture moving services with the highest standards of quality and safety, with comprehensive solutions including furniture disassembly, assembly, and packaging, ensuring customer satisfaction and comfort.",
+    features: [
+      "Furniture moving",
+      "Assembly/disassembly",
+      "Packing services",
+      "Quality assurance",
+    ],
+    yearCompleted: 2023,
+    clientType: "Furniture Services",
+    domain: "winchelmohandes-furniture.online",
+    url: "https://winchelmohandes-furniture.online/",
+  },
+  {
+    title: "Tashteeb beltaqseet",
     image: "tashteeb.png",
     description:
       "Full-service home renovation and finishing company providing affordable payment plans for quality interior and exterior remodeling services across Egypt.",
@@ -231,7 +279,22 @@ export const projects = [
     domain: "carmarket-eg.online",
     url: "https://carmarket-eg.online",
   },
-
+  {
+    title: "TNT Garage DE",
+    image: "tnt.png",
+    description:
+      "Online storefront and service platform in Egypt specializing in German automobile parts and maintenance services for brands like Volkswagen, Audi, and BMW, with 24/7 rescue and towing support.",
+    features: [
+      "New and used German car spare parts",
+      "Specialized maintenance and diagnostics",
+      "24/7 rescue and towing service",
+      "Nationwide delivery across Egypt",
+    ],
+    yearCompleted: 2024,
+    clientType: "Automotive Services & E-commerce",
+    domain: "tntgaragede.com",
+    url: "https://tntgaragede.com",
+  },
   {
     title: "Arizona",
     image: "arizona.png",
