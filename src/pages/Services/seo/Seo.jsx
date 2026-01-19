@@ -4,6 +4,10 @@ import Footer from '../../../components/Footer/Footer'
 import seo1 from '../../../images/seo/seo-1.png'
 import seo2 from '../../../images/seo/seo-2.png'
 import seo3 from '../../../images/seo/seo-3.png'
+import seo4 from '../../../images/seo/seo-4.png'
+import seo5 from '../../../images/seo/seo-5.png'
+import seo6 from '../../../images/seo/seo-6.png'
+import seo7 from '../../../images/seo/seo-7.png'
 import './seo.css'
 import { useEffect } from 'react'
 import AOS from 'aos'
@@ -13,7 +17,7 @@ const seoServices = [
     {
         name: 'On-Page SEO',
         detail: 'Optimize content, meta tags, and site structure for better rankings',
-        images: [seo3],
+        images: [seo3, seo4, seo5],
         benefits: [
             'Improved search engine visibility',
             'Higher quality content that ranks',
@@ -22,20 +26,9 @@ const seoServices = [
         ]
     },
     {
-        name: 'Technical SEO',
-        detail: 'Improve site speed, mobile-friendliness, and crawlability',
-        images: [seo1],
-        benefits: [
-            'Faster page load times',
-            'Mobile-responsive design',
-            'Better site architecture',
-            'Enhanced crawlability for search engines'
-        ]
-    },
-    {
         name: 'Keyword Research',
         detail: 'Identify high-value keywords to target your ideal audience',
-        images: [seo2],
+        images: [seo6, seo7],
         benefits: [
             'Target the right audience',
             'Discover profitable keywords',
@@ -43,6 +36,18 @@ const seoServices = [
             'Long-tail keyword opportunities'
         ]
     },
+    {
+        name: 'Technical SEO',
+        detail: 'Improve site speed, mobile-friendliness, and crawlability',
+        images: [seo1, seo2],
+        benefits: [
+            'Faster page load times',
+            'Mobile-responsive design',
+            'Better site architecture',
+            'Enhanced crawlability for search engines'
+        ]
+    },
+
     {
         name: 'SEO Analytics',
         detail: 'Track performance and refine strategies for continuous growth',
@@ -57,12 +62,33 @@ const seoServices = [
 ]
 
 const Seo = () => {
+    const [selectedImage, setSelectedImage] = React.useState(null);
+
     useEffect(() => {
         AOS.init({
             duration: 1000,
             once: true,
         })
         AOS.refresh()
+    }, [])
+
+    const openModal = (image) => {
+        setSelectedImage(image);
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+        document.body.style.overflow = 'unset'; // Re-enable scrolling
+    };
+
+    // Close modal on escape key
+    useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') closeModal();
+        };
+        window.addEventListener('keydown', handleEscape);
+        return () => window.removeEventListener('keydown', handleEscape);
     }, [])
 
     return (
@@ -96,6 +122,8 @@ const Seo = () => {
                                             alt={`${srv.name} results - ${i + 1}`}
                                             key={i}
                                             className="service-img"
+                                            onClick={() => openModal(img)}
+                                            style={{ cursor: 'pointer' }}
                                         />
                                     ))}
                                 </div>
@@ -119,7 +147,7 @@ const Seo = () => {
                             <div className="stat-label">Average Traffic Increase</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-number">Top 10</div>
+                            <div className="stat-number">Top 5</div>
                             <div className="stat-label">Ranking Positions</div>
                         </div>
                         <div className="stat-item">
@@ -135,6 +163,18 @@ const Seo = () => {
                 </section>
             </main>
             <Footer />
+
+            {/* Image Modal */}
+            {selectedImage && (
+                <div className="image-modal" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="modal-close" onClick={closeModal}>
+                            ✕
+                        </button>
+                        <img src={selectedImage} alt="SEO Results" className="modal-image" />
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
