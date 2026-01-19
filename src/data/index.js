@@ -3,15 +3,12 @@ import {
   Contact,
   Info,
   Braces,
-  Facebook,
-  Instagram,
   Phone,
   ChevronsLeftRightEllipsis,
   QrCode,
   Camera,
-  TicketCheck,
-  Printer,
   Briefcase,
+  Search,
 } from "lucide-react";
 
 import innovation from "../pages/About/svg/innovation.svg";
@@ -68,16 +65,35 @@ export const services = [
           "Secure online shops with payment integration and inventory management",
       },
       {
-        name: "SEO",
-        detail:
-          "Search engine optimization to improve visibility and organic traffic",
-      },
-      {
         name: "Google Ads",
         detail: "Targeted advertising campaigns for maximum ROI",
       },
     ],
     icon: <ChevronsLeftRightEllipsis color="#231f1f" />,
+  },
+  {
+    category: "SEO",
+    description:
+      "Search Engine Optimization to boost your visibility and organic traffic.",
+    services: [
+      {
+        name: "On-Page SEO",
+        detail: "Optimize content, meta tags, and site structure for better rankings",
+      },
+      {
+        name: "Technical SEO",
+        detail: "Improve site speed, mobile-friendliness, and crawlability",
+      },
+      {
+        name: "Keyword Research",
+        detail: "Identify high-value keywords to target your ideal audience",
+      },
+      {
+        name: "SEO Analytics",
+        detail: "Track performance and refine strategies for continuous growth",
+      },
+    ],
+    icon: <Search color="#231f1f" />,
   },
   {
     category: "Social Media Management",
@@ -122,53 +138,6 @@ export const services = [
     ],
     icon: <Camera color="#231f1f" />,
   },
-  {
-    category: "Printing Services",
-    description:
-      "Premium quality print materials for effective offline marketing.",
-    services: [
-      {
-        name: "Business Cards",
-        detail: "Premium cardstock with various finish options",
-      },
-      {
-        name: "Flyers & Brochures",
-        detail: "Eye-catching designs for promotions and events",
-      },
-      {
-        name: "Restaurant Menus",
-        detail: "Food photography integrated with menu design",
-      },
-      {
-        name: "Custom Invoice Books",
-        detail: "Branded financial documents with sequential numbering",
-      },
-      {
-        name: "Prescription Pads",
-        detail: "Professional medical forms with security features",
-      },
-      {
-        name: "Advertising Signage",
-        detail: "Durable indoor/outdoor signs for maximum visibility",
-      },
-    ],
-    icon: <Printer color="#231f1f" />,
-  },
-  // {
-  //   category: "Travel Booking",
-  //   description: "Hassle-free flight arrangements with competitive pricing.",
-  //   services: [
-  //     {
-  //       name: "International Flights",
-  //       detail: "Worldwide destinations with premium airline options",
-  //     },
-  //     {
-  //       name: "Domestic Flights",
-  //       detail: "Local travel with best-price guarantees",
-  //     },
-  //   ],
-  //   icon: <TicketCheck color="#231f1f" />,
-  // },
 ];
 export const navItems = [
   {

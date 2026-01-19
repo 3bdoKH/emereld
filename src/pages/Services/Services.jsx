@@ -18,10 +18,9 @@ import { useNavigate } from 'react-router-dom';
 
 const serviceRoutes = {
   'Web Design': '/services/web',
+  'SEO': '/services/seo',
   'Social Media Management': '/services/social',
   'Professional Photography': '/services/photography',
-  'Printing Services': '/services/printing',
-  'Travel Booking': '/services/booking',
 }
 
 const Services = () => {
