@@ -344,6 +344,22 @@ export const projects = [
     domain: "winchelgomhoria.com",
     url: "https://winchelgomhoria.com/",
   },
+  {
+    title: "Winch Elsuez",
+    image: "winch-elsuez.png",
+    description:
+      "24/7 roadside assistance and towing service operating throughout Egypt, providing fast and reliable emergency vehicle recovery and transportation services.",
+    features: [
+      "Emergency towing",
+      "Roadside assistance",
+      "Vehicle recovery",
+      "Nationwide service",
+    ],
+    yearCompleted: 2026,
+    clientType: "Automotive Services",
+    domain: "winch-elsuez.com",
+    url: "https://winch-elsuez.com/",
+  },
 ];
 
 export const values = [
